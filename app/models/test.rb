@@ -36,5 +36,24 @@ class Test
       sample_volume_requirement: 80,
       sample_tube_type: :purple
     }
-  ]
+  ].freeze
+
+  TEST_LOOKUP = DATA.index_by { |d| d[:id] }.freeze
+
+  def self.find(test_id)
+    test_data = TEST_LOOKUP[test_id]
+
+    return unless test_data.present?
+
+    new(**test_data)
+  end
+
+  def initialize(id:, name:, sample_volume_requirement:, sample_tube_type:)
+    @id = id
+    @name = name
+    @sample_volume_requirement = sample_volume_requirement
+    @sample_tube_type = sample_tube_type
+  end
+
+  attr_reader :id, :name, :sample_volume_requirement, :sample_tube_type
 end
