@@ -43,3 +43,9 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+def load_json_fixture(path)
+  full_fixture_path = Rails.root.join("spec", "fixtures", "#{path}.json")
+
+  JSON.parse(File.read(full_fixture_path))
+end

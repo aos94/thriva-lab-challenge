@@ -1,0 +1,11 @@
+{
+  "errors": [
+    {
+      "source": {
+        "parameter": "include"
+      },
+      "title": "Invalid Query Parameter",
+      "detail": "`nonsense` is not a valid relationship for the requested resource"
+    }
+  ]
+}

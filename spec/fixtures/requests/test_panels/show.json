@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "test_panels",
+    "id": "TP2",
+    "attributes": {
+      "price": 2100,
+      "sample_tube_types": [
+        "purple",
+        "yellow"
+      ],
+      "sample_volume_requirement": 220
+    },
+    "relationships": {
+      "test": {
+        "data": [
+          {
+            "type": "test",
+            "id": "HBA1C"
+          },
+          {
+            "type": "test",
+            "id": "B12"
+          }
+        ]
+      }
+    }
+  }
+}

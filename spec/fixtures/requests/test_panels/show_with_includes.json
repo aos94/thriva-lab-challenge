@@ -1,0 +1,48 @@
+{
+  "data": {
+    "type": "test_panels",
+    "id": "TP2",
+    "attributes": {
+      "price": 2100,
+      "sample_tube_types": [
+        "purple",
+        "yellow"
+      ],
+      "sample_volume_requirement": 220
+    },
+    "relationships": {
+      "test": {
+        "data": [
+          {
+            "type": "test",
+            "id": "HBA1C"
+          },
+          {
+            "type": "test",
+            "id": "B12"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "test",
+      "id": "HBA1C",
+      "attributes": {
+        "name": "HbA1C",
+        "sample_tube_type": "purple",
+        "sample_volume_requirement": 40
+      }
+    },
+    {
+      "type": "test",
+      "id": "B12",
+      "attributes": {
+        "name": "Vitamin B12",
+        "sample_tube_type": "yellow",
+        "sample_volume_requirement": 180
+      }
+    }
+  ]
+}
